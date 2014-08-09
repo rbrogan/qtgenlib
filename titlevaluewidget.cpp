@@ -14,6 +14,9 @@ TitleValueWidget::TitleValueWidget(QString title, QString initialValue, Qt::Orie
 
      layout->addWidget(titleLabel, (orientation == Qt::Horizontal) ? Qt::AlignRight : Qt::AlignBottom);
      layout->addWidget(valueLabel, (orientation == Qt::Horizontal) ? Qt::AlignLeft : Qt::AlignTop);
+     layout->addStretch(1);
+     layout->setStretchFactor(titleLabel, 0);
+     layout->setStretchFactor(valueLabel, 0);
 
      setLayout(layout);
 

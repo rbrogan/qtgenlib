@@ -15,6 +15,8 @@ LabelEditWidget::LabelEditWidget(QString title, QString initialValue, Qt::Orient
 
      layout->addWidget(titleLabel, (orientation == Qt::Horizontal) ? Qt::AlignRight : Qt::AlignBottom);
      layout->addWidget(valueEdit, (orientation == Qt::Horizontal) ? Qt::AlignLeft : Qt::AlignTop);
+     layout->addStretch(1);
+     layout->setStretchFactor(titleLabel, 0);
      previousValue = "";
      currentValue = initialValue;
 
