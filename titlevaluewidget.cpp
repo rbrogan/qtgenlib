@@ -12,8 +12,8 @@ TitleValueWidget::TitleValueWidget(QString title, QString initialValue, Qt::Orie
           layout = new QVBoxLayout;
      }
 
-     layout->addWidget(titleLabel);
-     layout->addWidget(valueLabel);
+     layout->addWidget(titleLabel, (orientation == Qt::Horizontal) ? Qt::AlignRight : Qt::AlignBottom);
+     layout->addWidget(valueLabel, (orientation == Qt::Horizontal) ? Qt::AlignLeft : Qt::AlignTop);
 
      setLayout(layout);
 

@@ -13,8 +13,8 @@ LabelEditWidget::LabelEditWidget(QString title, QString initialValue, Qt::Orient
      titleLabel = new QLabel(title);
      valueEdit = new QLineEdit(initialValue);
 
-     layout->addWidget(titleLabel);
-     layout->addWidget(valueEdit);
+     layout->addWidget(titleLabel, (orientation == Qt::Horizontal) ? Qt::AlignRight : Qt::AlignBottom);
+     layout->addWidget(valueEdit, (orientation == Qt::Horizontal) ? Qt::AlignLeft : Qt::AlignTop);
      previousValue = "";
      currentValue = initialValue;
 
