@@ -36,13 +36,17 @@ void QStringListInputDialog::splitAndAccept()
      accept();
 }
 
-QStringList getQStringListFromUser(QString dialogTitle, QWidget *parent)
+QStringList getQStringListFromUser(QString dialogTitle, bool *ok, QWidget *parent)
 {
      QStringList retObj;
      QStringListInputDialog dialog(dialogTitle, parent);
      if (dialog.exec()) {
+          if (ok != 0)
+               *ok = true;
           retObj = dialog.items;
      } else {
+          if (ok != 0)
+               *ok = false;
           retObj = QStringList();
      }
 

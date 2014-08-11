@@ -20,6 +20,6 @@ public slots:
     
 };
 
-extern QStringList getQStringListFromUser(QString dialogTitle, QWidget *parent = 0);
+extern QStringList getQStringListFromUser(QString dialogTitle, bool *ok = 0, QWidget *parent = 0);
 
 #endif // QSTRINGLISTINPUTDIALOG_H
